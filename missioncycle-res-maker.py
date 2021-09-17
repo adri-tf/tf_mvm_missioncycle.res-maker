@@ -1,8 +1,12 @@
-from os import listdir
-from os.path import isfile, join
+### 
 
 path_1 = 'C:/Program Files (x86)/Steam/steamapps/common/Team Fortress 2/tf/maps'
 path_2 = 'C:/Program Files (x86)/Steam/steamapps/common/Team Fortress 2/tf/download/maps'
+
+###
+
+from os import listdir
+from os.path import isfile, join
 
 maps_files = []
 
@@ -43,5 +47,3 @@ f.write("\
 	}\n\
 }\n\
 ")
-
-print(maps_names)
