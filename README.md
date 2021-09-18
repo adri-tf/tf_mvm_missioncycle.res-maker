@@ -1,5 +1,5 @@
 # tf_mvm_missioncycle.res-maker
-A Python script to create "tf_mvm_missioncycle.res" allowing people to vote for a MvM map in-game.
+A Python script to generate *tf_mvm_missioncycle.res* listing the maps people can vote for in-game.
 
 ## How to use
 Change path_1 and path_2 so that they match your maps folders.
