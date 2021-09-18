@@ -1,7 +1,9 @@
 ### 
 
-path_1 = 'C:/Program Files (x86)/Steam/steamapps/common/Team Fortress 2/tf/maps'
-path_2 = 'C:/Program Files (x86)/Steam/steamapps/common/Team Fortress 2/tf/download/maps'
+paths = [
+	'C:/Program Files (x86)/Steam/steamapps/common/Team Fortress 2/tf/maps',
+	'C:/Program Files (x86)/Steam/steamapps/common/Team Fortress 2/tf/download/maps'
+	]
 
 ###
 
@@ -10,12 +12,12 @@ from os.path import isfile, join
 
 maps_files = []
 
-for path in (path_1, path_2):
-	maps_files += [f for f in listdir(path)
+for p in paths:
+	maps_files += [f for f in listdir(p)
 		if ( 
 			f.split('_')[0] == 'mvm' and
 			f.split('.')[-1] == 'bsp' and
-			isfile(join(path, f))
+			isfile(join(p, f))
 		)
 	]
 
@@ -47,3 +49,5 @@ f.write("\
 	}\n\
 }\n\
 ")
+
+f.close()
